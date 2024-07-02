@@ -1,0 +1,31 @@
+-------------------------------------------------------------------------------
+Test set: us.abstracta.runners.RunCucumberTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.898 s <<< FAILURE! - in us.abstracta.runners.RunCucumberTest
+Revisar Factibilidad Fibra Óptica.Usuario revisa si tiene factibilidad de fibra óptica ingresando mal el nro de documento (CI)  Time elapsed: 0.223 s  <<< ERROR!
+io.cucumber.junit.UndefinedStepException: 
+The step 'el usuario está en la página principal de WOM' and 3 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("el usuario está en la página principal de WOM")
+public void el_usuario_está_en_la_página_principal_de_wom() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("el usuario navega al menú Planes y selecciona el submenú Planes + Equipos")
+public void el_usuario_navega_al_menú_planes_y_selecciona_el_submenú_planes_equipos() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("debería ver la página de Planes + Equipos")
+public void debería_ver_la_página_de_planes_equipos() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("el usuario hace click en la opción de {int} MB")
+public void el_usuario_hace_click_en_la_opción_de_mb(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
