@@ -39,31 +39,31 @@ public class CheckOutPage {
         // Presionar botón
         page.locator("xpath=//button[@type='submit']").click();
     }
-        // Paso 2
-        public void agendolainstalacion(){
+    // Paso 2
+    public void agendolainstalacion(){
 
-            // Seleccionar Fecha
-            page.waitForTimeout(10000);
-            ElementHandle primerDiaDisponible = page.querySelector(".datepicker-date:not(.datepicker-disabled)");
+        // Seleccionar Fecha
+        page.waitForTimeout(10000);
+        ElementHandle primerDiaDisponible = page.querySelector(".datepicker-date:not(.datepicker-disabled)");
 
-            // Seleccionar Hora
-            ElementHandle primeraHoraDisponible = page.querySelector(".timepicker-item:not(.timepicker-disabled)");
-            // Presionar botón Ir al siguiente paso
+        // Seleccionar Hora
+        ElementHandle primeraHoraDisponible = page.querySelector(".timepicker-item:not(.timepicker-disabled)");
+        // Presionar botón Ir al siguiente paso
 
-            page.locator("xpath=//button[@type='submit']").click();
-        }
-        public void confirmoSolicitud(){
-            //page.locator("xpath=//div[contains(text(),'Finalizar')]");
-            //page.locator("css=div.checkoutStepDiv div.divColums:nth-child(3) div.li.toPayInfo:nth-child(1) div.infoDetailCard:nth-child(2) div.li.toPayDetail:nth-child(7) div.confirmDiv.confirmDivLeft div.cardFlexDiv div.flex-container.step-buttons-container button.aws-btn.aws-btn--primary.aws-btn--visible.confirmButton.aws-btn--right span.aws-btn__wrapper span.aws-btn__content span:nth-child(1) > div:nth-child(1)")
-            //page.locator("xpath=/html[1]/body[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[2]/div[5]/div[1]/div[1]/div[3]/div[1]/button[1]/span[1]/span[1]/span[1]/div[1]")
-            page.setContent("<div><button>Finalizar </button></div>");
-            String cedula = "css=#ci";
-            page.fill(cedula, "123123123");
-            page.locator("xpath=//span[contains(text(),'Validar')]").click();
-            page.locator("xpath=//p[contains(text(),'Validación no fue procesada con éxito')]");
-            page.locator("xpath=//div[@class='input-info-module--helpLink--A80yj']").click();
-            page.locator("xpath=//p[@class='cardCloseText']").click();
-        }
+        page.locator("xpath=//button[@type='submit']").click();
+    }
+    public void confirmoSolicitud(){
+        //page.locator("xpath=//div[contains(text(),'Finalizar')]");
+        //page.locator("css=div.checkoutStepDiv div.divColums:nth-child(3) div.li.toPayInfo:nth-child(1) div.infoDetailCard:nth-child(2) div.li.toPayDetail:nth-child(7) div.confirmDiv.confirmDivLeft div.cardFlexDiv div.flex-container.step-buttons-container button.aws-btn.aws-btn--primary.aws-btn--visible.confirmButton.aws-btn--right span.aws-btn__wrapper span.aws-btn__content span:nth-child(1) > div:nth-child(1)")
+        //page.locator("xpath=/html[1]/body[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[2]/div[5]/div[1]/div[1]/div[3]/div[1]/button[1]/span[1]/span[1]/span[1]/div[1]")
+        page.setContent("<div><button>Finalizar </button></div>");
+        String cedula = "css=#ci";
+        page.fill(cedula, "123123123");
+        page.locator("xpath=//span[contains(text(),'Validar')]").click();
+        page.locator("xpath=//p[contains(text(),'Validación no fue procesada con éxito')]");
+        page.locator("xpath=//div[@class='input-info-module--helpLink--A80yj']").click();
+        page.locator("xpath=//p[@class='cardCloseText']").click();
+    }
 
 
 }

@@ -1,11 +1,10 @@
 package us.abstracta.pages;
 
 import com.microsoft.playwright.Page;
-
 import java.nio.file.Paths;
 
 public class BasePage {
-    protected Page page;
+    protected final Page page;
 
     public BasePage(Page page) {
         this.page = page;
@@ -29,10 +28,6 @@ public class BasePage {
 
     public void waitForSelector(String selector) {
         page.waitForSelector(selector);
-    }
-
-    public void selectDropdownOption(String selector, String optionText) {
-        // Implementar lógica para seleccionar una opción en un dropdown
     }
 
     public String getTextContent(String selector) {

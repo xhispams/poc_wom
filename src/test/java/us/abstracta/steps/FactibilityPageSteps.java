@@ -3,26 +3,16 @@ package us.abstracta.steps;
 import com.microsoft.playwright.Page;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import us.abstracta.pages.CheckOutPage;
-import us.abstracta.pages.FactibilityPage;
 import us.abstracta.config.DependencyInjector;
-import us.abstracta.pages.HomePage;
+import us.abstracta.pages.FactibilityPage;
 
 public class FactibilityPageSteps {
     private Page page;
     private FactibilityPage factibilityPage;
 
     public FactibilityPageSteps() {
-        this.page = DependencyInjector.getPage("chromium");  // Cambia "chromium" por el navegador deseado
+        this.page = DependencyInjector.getPage("chromium");
         this.factibilityPage = new FactibilityPage(page);
-
-    }
-
-
-    @When("navego al menú Hogar y selecciono sub menu Revisa factibilidad")
-    public void navego_al_menu_Hogar_y_selecciono_sub_menu_Revisa_factibilidad() {
-        factibilityPage.clickMenuHogar();
-        factibilityPage.clickSubMenuReviseFactibilidad();
     }
 
     @When("selecciono la opción de 600 MB")

@@ -10,14 +10,15 @@ public class HomePage extends BasePage {
         super(page);
     }
 
-    public void navigateToAvailabilityCheck() {
-        page.click(menuHogar);
+    public void clickMenuHogar() {
+        clickElement(menuHogar);
     }
 
     public void clickSubMenuReviseFactibilidad() {
-        page.getByText("Revisa Factibilidad").click();
+        clickElement("text=Revisa Factibilidad");
     }
-    public void navigate(){
-        page.navigate("https://www.wom.cl/");
+
+    public void navigateToHomePage() {
+        navigateTo("https://www.wom.cl/");
     }
 }

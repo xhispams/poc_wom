@@ -10,10 +10,9 @@ public class DependencyInjector {
     private static final MutablePicoContainer container = new DefaultPicoContainer(new Caching());
 
     static {
-        // Agrega instancias de las páginas de Playwright al contenedor
-        container.addComponent("chromiumPage", PlaywrightConfig.createChromiumPage());
-        container.addComponent("firefoxPage", PlaywrightConfig.createFirefoxPage());
-        container.addComponent("webkitPage", PlaywrightConfig.createWebkitPage());
+        container.addComponent("chromiumPage", PlaywrightConfig.createPage("chromium", false));
+        container.addComponent("firefoxPage", PlaywrightConfig.createPage("firefox", true));
+        container.addComponent("webkitPage", PlaywrightConfig.createPage("webkit", true));
     }
 
     public static <T> T getInstance(Class<T> clazz) {
